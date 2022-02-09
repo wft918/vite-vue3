@@ -1,0 +1,50 @@
+<template>
+  <div class="Home">
+    <div class="lt">
+      <Left />
+    </div>
+    <div class="rt">
+      <div class="rt-top">
+        <RtTop />
+      </div>
+      <div class="rt-bot">
+        <router-view></router-view>
+      </div>
+    </div>
+  </div>
+</template>
+<script setup>
+import Left from "./layout/left.vue";
+import RtTop from "./layout/rtTop.vue";
+</script>
+<style scoped>
+.Home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.lt {
+  width: 12%;
+  height: 100%;
+  background-color: #ccc;
+}
+
+.rt {
+  width: 88%;
+  height: 100%;
+}
+
+.rt-top {
+  width: 100%;
+  height: 41px;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.rt-bot {
+  width: 100%;
+  height: calc(100% - 41px);
+  padding: 20px;
+}
+</style>
