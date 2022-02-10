@@ -37,5 +37,18 @@ export default [
         component: () => import('@/views/pages/chart/chart.vue')
       }
     ]
+  },
+  {
+    label: '用户',
+    id: '4',
+    children: [
+      {
+        label: '用户列表',
+        id: '4-1',
+        children: [],
+        path: '/user',
+        component: () => import('@/views/pages/user/user.vue')
+      }
+    ]
   }
 ]

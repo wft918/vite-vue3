@@ -1,0 +1,9 @@
+{
+  "code": 200,
+  "msg": "操作成功",
+  "success": true,
+  "data": {
+    "username": "普通用户",
+    "userid": "1010101010101"
+  }
+}

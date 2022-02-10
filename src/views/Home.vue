@@ -5,7 +5,7 @@
     </div>
     <div class="rt">
       <div class="rt-top">
-        <RtTop />
+        <Breadcrumb />
       </div>
       <div class="rt-bot">
         <router-view></router-view>
@@ -15,7 +15,7 @@
 </template>
 <script setup>
 import Left from "./layout/left.vue";
-import RtTop from "./layout/rtTop.vue";
+import Breadcrumb from "./layout/Breadcrumb.vue";
 </script>
 <style scoped>
 .Home {
