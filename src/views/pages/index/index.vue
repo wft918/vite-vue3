@@ -2,31 +2,43 @@
   <h1>首页</h1>
   <hr>
   <h3>{{ data }}</h3>
-  <el-button type="primary" @click="editData">点击修改data</el-button>
+  <el-button type="primary">点击修改data</el-button>
+  <hr>
+  {{data.incrementCounter}}
 </template>
 <script setup>
-import { reactive, watch, watchEffect, ref } from "vue";
+  import { reactive, watch, watchEffect, computed, effectScope } from "vue";
 
-const data = reactive({
-  name:'小明',
-  age: 19
-})
-const flag = ref(true)
+  const scope = effectScope()
 
-const editData = () => {
-  data.name += '小红'
-}
+  const data = reactive({
+    counter: 0,
+    incrementCounter: ''
+  })
 
-watch(data,(newVal, oldVal) => {
-  console.log(newVal,'修改后的值')
-  console.log(oldVal,'修改前的值')
-})
+  setInterval(() => {
+    data.counter++
+  }, 1000)
 
-watchEffect(() => {
-  console.log(data,'watchEffect----data')
-  console.log(flag.value, 'watchEffect----flag')
-})
+  scope.run(() => {
+    data.incrementCounter = computed(() => data.counter * 2)
+    watch(
+      () => data.counter,
+      (newVal, oldVal) => {
+        console.log(`新值${newVal}---旧值${oldVal}`)
+      }
+    )
+
+    watchEffect(() => {
+      console.log(data.counter, 'watchEffect')
+    })
+  })
+
+  setTimeout(() => {
+    scope.stop()
+  }, 8000)
+  
 </script>
 <style scoped>
-  
+
 </style>
