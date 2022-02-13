@@ -1,7 +1,6 @@
 
 import { defineStore } from 'pinia'
 import viewsRouter from '@/router/views'
-console.log(viewsRouter,'viewsRouter')
 
 export const useIndexStore = defineStore('index', {
   state: () => {

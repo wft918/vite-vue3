@@ -15,9 +15,8 @@ axios.defaults.headers['Content-Type'] = 'application/x-www-form-urluncoded'  //
  
 // 请求拦截
 axios.interceptors.request.use(config => {
-  console.log(config,'请求config-->>')
-  // const token = localStorage.getItem('token')
-  // if(token) config.headers.Authorization = token
+  const token = localStorage.getItem('token')
+  if(token) config.headers.Authorization = token
  
   return config
 })

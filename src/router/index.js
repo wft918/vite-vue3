@@ -7,4 +7,18 @@ const router = createRouter({
   routes: [...pageRouter, ...viewsRouter]
 })
 
+
+router.beforeEach((to, from, next) => {
+  const token = localStorage.getItem('token')
+  if(token) {
+    next()
+  }else {
+    if(to.path != '/login') {
+      next({ path: '/login' })
+    }else {
+      next()
+    }
+  }
+})
+
 export default router
