@@ -36,7 +36,7 @@
 <script setup>
   import '@/utils/flexible'
   import { reactive, ref, onMounted } from 'vue'
-  import Sidentify from '@/component/sidentify/sidentify.vue'
+  import Sidentify from '@/components/sidentify/sidentify.vue'
   import { login } from '@/api/user'
   import { useRouter } from 'vue-router'
 
