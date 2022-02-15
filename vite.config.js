@@ -32,6 +32,15 @@ export default ({ mode }) => {
         '@assets': path.resolve(__dirname, './src/assets')
       }
     },
+    // css: {
+    //   loaderOptions: {
+    //     less: {
+    //       modifyVars: {
+    //       },
+    //       javascriptEnabled: true,
+    //     }
+    //   }
+    // },
     // 通过代理方式解决跨域问题
     server: {
       port: '3000',

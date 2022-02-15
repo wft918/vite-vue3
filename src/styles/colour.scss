@@ -1,0 +1,61 @@
+.colour1 {
+  font-family: "ysbth";
+  /* 字体倾斜 */
+  font-style: oblique;
+  background-image: -webkit-linear-gradient(
+    left,
+    green,
+    yellow,
+    pink,
+    blue,
+    red 25%,
+    green 35%,
+    blue 50%,
+    yellow 60%,
+    red 75%,
+    pink 85%,
+    blue 100%
+  );
+  /* //颜色填充 透明 */
+  -webkit-text-fill-color: transparent;
+  /* 背景颜色绘制区域 */
+  -webkit-background-clip: text;
+  /* 流动 15秒 循环 直线 */
+  animation: stream 15s infinite linear;
+  background-size: 200% 100%;
+}
+/* 匀速流动 */
+@keyframes stream {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+
+.colour2 {
+  font-size: 0.083333rem;
+  font-family: "ysbth";
+  color: #8c888b;
+  /* 字体倾斜 */
+  font-style: oblique;
+  background: -webkit-linear-gradient(45deg, #70f7fe, #fbd7c6, #fdefac, #392bf3, #bed5f5);
+  -moz-linear-gradient: (45deg, #70f7fe, #fbd7c6, #fdefac, #bfb5dd, #bed5f5);
+  -ms-linear-gradient: (45deg, #70f7fe, #fbd7c6, #fdefac, #bfb5dd, #bed5f5);
+  /*设置字体颜色透明*/
+  color: transparent;
+  /*背景裁剪为文本形式*/
+  -webkit-background-clip: text;
+  /*动态10s展示*/
+  animation: ran 20s linear infinite;
+}
+@keyframes ran {
+  from {
+    backgroud-position: 0 0;
+  }
+  to {
+    background-position: 10.416667rem 0;
+  }
+}
