@@ -1,20 +1,17 @@
 
-const express = require('express')
 //  1. 导入用于生成 JWT 字符串的包
 const jwt = require('jsonwebtoken')
 
 // 定义一个 secret 密钥 本质：就是一个字符串
 const secretKey = 'itheima No ^_^'
 
-const router = express.Router()
-
 const adminData = require('../data/admin.json')
 const vipData = require('../data/vip.json')
 const ordinaryData = require('../data/ordinary.json')
 
 
-// 登录接口
-router.post('/login', (req, res) => {
+// 登录接口的处理函数
+exports.loginHandler = (req, res) => {
   const userInfo = req.body  // 用户信息（包含用户名、密码等）
   console.log(req.body,'body-->>')
   // 登录失败的情况
@@ -38,9 +35,10 @@ router.post('/login', (req, res) => {
     success: true,
     token: tokenStr
   })
-})
+}
 
-router.get('/user', (req, res) => {
+// user 接口的处理函数
+exports.userHandler = (req, res) => {
   if(JSON.stringify(req.query) == '{}') {
     throw new Error('找不到当前用户!')
   }else if(req.query.username == 'admin') {
@@ -50,6 +48,4 @@ router.get('/user', (req, res) => {
   }else {
     res.send(ordinaryData)
   }
-})
-
-module.exports = router
+}

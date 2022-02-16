@@ -5,7 +5,7 @@ const expressJWT = require('express-jwt')
 
 const app = express()
 
-const router = require('./router/router')
+const userRouter = require('./router/user')
 // 定义一个 secret 密钥 本质：就是一个字符串  和 路由里面的secret一致
 const secretKey = 'itheima No ^_^'
 
@@ -30,7 +30,7 @@ app.use((req, res, next) => {
   next()
 })
 
-app.use(router)
+app.use(userRouter)
 
 /**
  *  全局错误中间件
