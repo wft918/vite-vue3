@@ -7,7 +7,7 @@
   {{data.incrementCounter}}
 </template>
 <script setup>
-  import { reactive, watch, watchEffect, computed, effectScope } from "vue";
+  import { reactive, watch, watchEffect, computed, effectScope, onUnmounted } from "vue";
 
   const scope = effectScope()
 
@@ -15,9 +15,11 @@
     counter: 0,
     incrementCounter: ''
   })
+  let timer = null
 
-  setInterval(() => {
+  timer = setInterval(() => {
     data.counter++
+    console.log('interval----------->>>')
   }, 1000)
 
   scope.run(() => {
@@ -37,6 +39,12 @@
   setTimeout(() => {
     scope.stop()
   }, 8000)
+
+
+  // 组件离开
+  onUnmounted(() => {
+    if(timer) clearInterval(timer)
+  })
   
 </script>
 <style scoped>

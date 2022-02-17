@@ -50,5 +50,18 @@ export default [
         component: () => import('@/views/pages/user/user.vue')
       }
     ]
+  },
+  {
+    label: '拖拽',
+    id: '5',
+    children: [
+      {
+        label: '拖拽',
+        id: '5-1',
+        children: [],
+        path: '/drag',
+        component: () => import('@/views/pages/Drag/Drag.vue')
+      }
+    ]
   }
 ]
