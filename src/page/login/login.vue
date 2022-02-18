@@ -35,11 +35,12 @@
 </template>
 <script setup>
   import '@/utils/flexible'
-  import { reactive, ref, onMounted } from 'vue'
+  import { reactive, ref, onMounted, getCurrentInstance } from 'vue'
   import Sidentify from '@/components/sidentify/sidentify.vue'
   import { login } from '@/api/user'
   import { useRouter } from 'vue-router'
-
+  import { ElMessage } from 'element-plus'
+  const { proxy } = getCurrentInstance()
   const router = useRouter()
 
 
@@ -101,12 +102,16 @@
         loading.value = true
         login(inputForm).then(data => {
           if(data && data.success) {
-            const { token } = data
+            const { token, message } = data
             localStorage.setItem('token', token)
             setTimeout(() => {
               loading.value = false
+              ElMessage.success(message)
               router.replace('/')
             },800)
+          }else {
+            loading.value = false
+            ElMessage.error(data.message)
           }
         })
       }

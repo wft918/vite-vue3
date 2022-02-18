@@ -63,5 +63,31 @@ export default [
         component: () => import('@/views/pages/Drag/Drag.vue')
       }
     ]
+  },
+  {
+    label: 'VMODEL',
+    id: '6',
+    children: [
+      {
+        label: 'VMODEL',
+        id: '6-1',
+        children: [],
+        path: '/vModel',
+        component: () => import('@/views/pages/vModel/vModel.vue')
+      }
+    ]
+  },
+  {
+    label: 'TABLE',
+    id: '7',
+    children: [
+      {
+        label: 'TABLE',
+        id: '7-1',
+        children: [],
+        path: '/table',
+        component: () => import('@/views/pages/table/tableList.vue')
+      }
+    ]
   }
 ]
