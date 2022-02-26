@@ -15,7 +15,7 @@
               </el-form-item>
             </el-col>
             <el-col :span="18">
-              <el-form-item prop="code" :rules="[{ required: true, message: '请输入验证码', trigger: 'blur' },{ validator: validateCode, trigger: 'blur' }]">
+              <el-form-item prop="code" :rules="[{ validator: validateCode, trigger: 'blur' }]">
                 <el-input v-model="inputForm.code" placeholder="请输入验证码"></el-input>
               </el-form-item>
             </el-col>
