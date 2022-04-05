@@ -89,5 +89,18 @@ export default [
         component: () => import('@/views/pages/table/tableList.vue')
       }
     ]
+  },
+  {
+    label: 'Teleport-video',
+    id: '8',
+    children: [
+      {
+        label: 'Teleport-video',
+        id: '8-1',
+        children: [],
+        path: '/TeleportVideo',
+        component: () => import('@/views/pages/TeleportVideo/TeleportVideo.vue')
+      }
+    ]
   }
 ]
