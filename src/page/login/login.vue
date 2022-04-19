@@ -56,6 +56,12 @@
   // 验证码的随机取值范围
   const identifyCodes = ref('123456789abcdefghjkmnpqrstuvwxyz')
 
+
+  onMounted(() => {
+    changeCode()
+    enterDown()
+  })
+  
   // 点击验证码触发
   const changeCode = () => {
     identifyCode.value = ''
@@ -118,11 +124,6 @@
     })
   }
 
-  onMounted(() => {
-    changeCode()
-    enterDown()
-  })
-
 </script>
 <style scoped>
   .login {
@@ -149,7 +150,7 @@
     border: none!important;
   }
 
-  /deep/ .el-form-item__content {
+  :deep(.el-form-item__content) {
     margin-left: 0 !important;
     background-color: #a9b8a8 !important;
   }
