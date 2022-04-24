@@ -1,6 +1,6 @@
 <template>
   <el-menu
-    default-active="1-1"
+    default-active=""
     class="el-menu-vertical-demo"
   >
     <SubMenu v-for="menu in menus" :key="menu.id" :menu="menu" />

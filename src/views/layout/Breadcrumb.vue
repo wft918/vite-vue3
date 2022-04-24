@@ -12,7 +12,7 @@
   </el-tabs>
 </template>
 <script setup>
-import { computed, ref, watch } from "vue";
+import { computed, onMounted, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useIndexStore } from "@/store";
 const route = useRoute();
@@ -20,6 +20,11 @@ const router = useRouter()
 const indexStore = useIndexStore();
 
 let tabsValue = ref("/index");
+
+onMounted(() => {
+  mainTabs.value = route.path
+  tabsValue.value = route.path
+})
 
 let mainTabs = computed({
   get() {

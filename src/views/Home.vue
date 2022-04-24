@@ -8,7 +8,9 @@
         <Breadcrumb />
       </div>
       <div class="rt-bot">
-        <router-view></router-view>
+        <div>
+          <router-view></router-view>
+        </div>
       </div>
     </div>
   </div>
@@ -46,5 +48,12 @@ import Breadcrumb from "./layout/Breadcrumb.vue";
   width: 100%;
   height: calc(100% - 41px);
   padding: 20px;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+.rt-bot > div {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
 }
 </style>

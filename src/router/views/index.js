@@ -6,7 +6,16 @@ const viewsRouter = [
     name: '主页',
     component: () => import('@/views/Home.vue'),
     redirect: { name: 'index' },
-    children: []
+    children: [
+      {
+        path: 'index',
+        name: 'index',
+        meta: {
+          title: 'Home'
+        },
+        component: () => import('@/views/pages/index/index.vue')
+      }
+    ]
   }
 ]
 

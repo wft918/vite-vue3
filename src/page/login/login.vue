@@ -109,7 +109,7 @@
         login(inputForm).then(data => {
           if(data && data.success) {
             const { token, message } = data
-            localStorage.setItem('token', token)
+            localStorage.setItem('_v3_token', token)
             setTimeout(() => {
               loading.value = false
               ElMessage.success(message)

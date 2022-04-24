@@ -1,14 +1,14 @@
 export default [
   {
-    label: '主页',
+    label: 'effectScope',
     id: '1',
     children: [
       {
-        label: '首页',
+        label: 'effectScope',
         id: '1-1',
         children: [],
-        path: '/index',
-        component: () => import('@/views/pages/index/index.vue')
+        path: '/effectScope',
+        component: () => import('@/views/pages/effectScope/index.vue')
       }
     ]
   },
