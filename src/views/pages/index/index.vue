@@ -1,12 +1,11 @@
 <template>
   <div>
-    <img :src="imgSrc" alt="">
+    <img :src="img2" alt="">
   </div>
 </template>
 <script setup>
-const imgSrc = require('@/assets/login/login-bg.jpg')
-console.log(imgSrc, 'imgSrc----->>>')
-console.log(require, 'require----->>>')
+const img1 = require('@/assets/login/login-bg.jpg')
+let img2 = img1
 </script>
 <style scoped>
 

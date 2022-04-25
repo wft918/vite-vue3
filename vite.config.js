@@ -1,7 +1,7 @@
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 const path = require('path')
-// import requireTransform from 'vite-plugin-require-transform';  // 解决 require is not defined
+import requireTransform from 'vite-plugin-require-transform';  // 解决 require is not defined
 
 // element-plus  相关配置  按需导入
 import AutoImport from 'unplugin-auto-import/vite'
@@ -24,9 +24,9 @@ export default ({ mode }) => {
       Components({
         resolvers: [ElementPlusResolver()],
       }),
-      // requireTransform({
-      //   fileRegex: /.js$|.vue$/ ,
-      // })
+      requireTransform({
+        fileRegex: /.js$|.vue$/ ,
+      })
     ],
     // 别名
     resolve: {

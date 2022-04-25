@@ -22,8 +22,10 @@ const indexStore = useIndexStore();
 let tabsValue = ref("/index");
 
 onMounted(() => {
-  mainTabs.value = route.path
-  tabsValue.value = route.path
+  if(route.path !== '/index') {
+    mainTabs.value = route.path
+    tabsValue.value = route.path
+  }
 })
 
 let mainTabs = computed({
