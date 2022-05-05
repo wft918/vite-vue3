@@ -36,6 +36,9 @@ export default ({ mode }) => {
         '@assets': path.resolve(__dirname, './src/assets')
       }
     },
+    define: {
+      __VUE_OPTIONS_API__: false   // 关闭 Vue2 中的 options选项API
+    },
     // css: {
     //   loaderOptions: {
     //     less: {
