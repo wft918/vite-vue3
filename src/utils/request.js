@@ -6,11 +6,10 @@ import axios from 'axios'
 axios.defaults.baseURL = import.meta.env.MODE !== 'production' ? import.meta.env.VITE_APP_BASE_API : import.meta.env.VITE_APP_SERVER_URL
 // 设置超时时间
 axios.defaults.timeout = 10000
- 
+ // 跨域请求，允许保存cookie
 axios.defaults.withCredentials = true
- 
-// 设置请求传递数据格式  
-axios.defaults.headers['Content-Type'] = 'application/x-www-form-urluncoded'  // 'application/json'
+// axios.defaults.headers = {'Content-Type': 'application/json; charset=utf-8'}
+axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=utf-8'
 // axios.defaults.transformRequest = data => qs.stringify(data)   //针对POST请求
  
 // 请求拦截
