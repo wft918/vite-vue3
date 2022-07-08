@@ -94,5 +94,23 @@ export default [
         path: '/TeleportVideo/index'
       }
     ]
+  },
+  {
+    label: '练习',
+    id: '9',
+    children: [
+      {
+        label: '自定义Hooks',
+        id: '9-1',
+        children: [],
+        path: '/practice/hooks/index'
+      },
+      {
+        label: 'unknown',
+        id: '9-2',
+        children: [],
+        path: '/practice/unknown/index'
+      }
+    ]
   }
 ]

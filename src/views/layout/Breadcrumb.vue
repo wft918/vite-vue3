@@ -12,7 +12,7 @@
   </el-tabs>
 </template>
 <script setup>
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, nextTick, onMounted, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useIndexStore } from "@/store";
 const route = useRoute();
@@ -22,6 +22,7 @@ const indexStore = useIndexStore();
 let tabsValue = ref("/index");
 
 onMounted(() => {
+  console.log(route.path, '----->>>')
   if(route.path !== '/index') {
     mainTabs.value = route.path
     tabsValue.value = route.path
@@ -53,8 +54,10 @@ watch(
 
 // 点击tab标签对应跳转
 const tabClick = (path) => {
-  router.replace({
-    path: tabsValue.value
+  nextTick(() => { // 这很关键
+    router.replace({
+      path: tabsValue.value
+    })
   })
 }
 
