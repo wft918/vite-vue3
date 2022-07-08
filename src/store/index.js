@@ -1,6 +1,7 @@
 
 import { defineStore } from 'pinia'
-import viewsRouter from '@/router/views'
+// import viewsRouter from '@/router/views'
+import { flatMenuRoutes } from '@/router'
 
 export const useIndexStore = defineStore('index', {
   state: () => {
@@ -12,8 +13,7 @@ export const useIndexStore = defineStore('index', {
   actions: {
     updateMainTabs(val) {
       if(typeof val === 'string') {
-        const currentRouteObj = JSON.parse(JSON.stringify(viewsRouter[0].children.filter(item => `/${item.path}` == val)[0]))
-        currentRouteObj.path = `/${currentRouteObj.path}`
+        const currentRouteObj = flatMenuRoutes.find(item => item.path == val)
         if(this.mainTabs.every(item => item.path !== val)) {
           this.mainTabs.push(currentRouteObj)
         }

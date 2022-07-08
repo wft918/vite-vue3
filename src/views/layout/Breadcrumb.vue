@@ -1,12 +1,12 @@
 <!-- 面包屑组件 -->
 <template>
   <el-tabs v-model="tabsValue" @tab-click="tabClick" @tab-remove="tabRemove" type="card" class="demo-tabs">
-    <el-tab-pane :label="'首页'" :name="'/index'"></el-tab-pane>
+    <el-tab-pane :label="'主页'" :name="'/index'"></el-tab-pane>
     <el-tab-pane
       closable
       v-for="mainTab in mainTabs"
       :key="mainTab.path"
-      :label="mainTab.meta.title"
+      :label="mainTab.label"
       :name="mainTab.path"
     ></el-tab-pane>
   </el-tabs>

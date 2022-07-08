@@ -7,8 +7,7 @@ export default [
         label: 'effectScope',
         id: '1-1',
         children: [],
-        path: '/effectScope',
-        component: () => import('@/views/pages/effectScope/index.vue')
+        path: '/effectScope/index'
       }
     ]
   },
@@ -20,8 +19,7 @@ export default [
         label: '测试',
         id: '2-1',
         children: [],
-        path: '/test',
-        component: () => import('@/views/pages/test/test.vue')
+        path: '/test/index'
       }
     ]
   },
@@ -33,8 +31,7 @@ export default [
         label: 'echarts-5',
         id: '3-1',
         children: [],
-        path: '/chart',
-        component: () => import('@/views/pages/chart/chart.vue')
+        path: '/chart/index'
       }
     ]
   },
@@ -46,8 +43,7 @@ export default [
         label: '用户列表',
         id: '4-1',
         children: [],
-        path: '/user',
-        component: () => import('@/views/pages/user/user.vue')
+        path: '/user/index'
       }
     ]
   },
@@ -59,8 +55,7 @@ export default [
         label: '拖拽',
         id: '5-1',
         children: [],
-        path: '/drag',
-        component: () => import('@/views/pages/Drag/Drag.vue')
+        path: '/drag/index'
       }
     ]
   },
@@ -72,8 +67,7 @@ export default [
         label: 'VMODEL',
         id: '6-1',
         children: [],
-        path: '/vModel',
-        component: () => import('@/views/pages/vModel/vModel.vue')
+        path: '/vModel/index'
       }
     ]
   },
@@ -85,8 +79,7 @@ export default [
         label: 'TABLE',
         id: '7-1',
         children: [],
-        path: '/table',
-        component: () => import('@/views/pages/table/tableList.vue')
+        path: '/table/tableList'
       }
     ]
   },
@@ -98,8 +91,7 @@ export default [
         label: 'Teleport-video',
         id: '8-1',
         children: [],
-        path: '/TeleportVideo',
-        component: () => import('@/views/pages/TeleportVideo/TeleportVideo.vue')
+        path: '/TeleportVideo/index'
       }
     ]
   }

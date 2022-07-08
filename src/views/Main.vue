@@ -1,5 +1,5 @@
 <template>
-  <div class="Home">
+  <div class="Main">
     <div class="lt">
       <Left />
     </div>
@@ -20,7 +20,7 @@ import Left from "./layout/left.vue";
 import Breadcrumb from "./layout/Breadcrumb.vue";
 </script>
 <style scoped>
-.Home {
+.Main {
   width: 100%;
   height: 100%;
   display: flex;
