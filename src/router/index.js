@@ -28,7 +28,7 @@ flatMenuRoutes.forEach(item => {
   if(item.path) {
     const o = {}
     o.path = item.path.replace('/', '')
-    o.name = o.path.split('/')[o.path.split('/').length - 2]
+    o.name = o.path.split('/')[o.path.split('/').length - 2 < 0 ? 0 : o.path.split('/').length - 2]
     o.meta = {title: item.label}
     // o.component = defineAsyncComponent(() => import(/* @vite-ignore */`@/views/pages${item.path}.vue`))
     o.component = modules[`../views/pages${item.path}.vue`]

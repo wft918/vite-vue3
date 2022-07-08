@@ -20,7 +20,6 @@ export const useIndexStore = defineStore('index', {
       }else {
         this.mainTabs.splice(val, 1)
       }
-      console.log(this.mainTabs, '----->>>')
     }
   }
 })
