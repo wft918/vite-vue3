@@ -16,7 +16,7 @@ import { computed, nextTick, onMounted, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useIndexStore } from "@/store";
 const route = useRoute();
-const router = useRouter()
+const router = useRouter();
 const indexStore = useIndexStore();
 
 let tabsValue = ref("/index");
