@@ -15,6 +15,7 @@
     "pinia": "^2.0.11",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12",
+    "vue3-count-to": "^1.1.2",
     "xgplayer": "^2.31.6"
   },
   "devDependencies": {

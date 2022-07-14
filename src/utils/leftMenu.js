@@ -106,10 +106,10 @@ export default [
         path: '/practice/hooks/index'
       },
       {
-        label: 'unknown',
+        label: '数字滚动',
         id: '9-2',
         children: [],
-        path: '/practice/unknown/index'
+        path: '/practice/vCountTo/index'
       }
     ]
   }

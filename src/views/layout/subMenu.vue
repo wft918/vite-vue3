@@ -8,7 +8,6 @@
     <SubMenu v-for="item in menu.children" :key="item.id" :menu="item" />
   </el-sub-menu>
 
-
   <!-- 无子级 -->
   <el-menu-item v-else @click="menuClick" :index="menu.id">
     <span>{{menu.label}}</span>
