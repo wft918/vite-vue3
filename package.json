@@ -16,6 +16,7 @@
     "vue": "^3.2.25",
     "vue-router": "^4.0.12",
     "vue3-count-to": "^1.1.2",
+    "x2js": "^3.4.3",
     "xgplayer": "^2.31.6"
   },
   "devDependencies": {

@@ -110,6 +110,12 @@ export default [
         id: '9-2',
         children: [],
         path: '/practice/vCountTo/index'
+      },
+      {
+        label: 'XML数据解析',
+        id: '9-3',
+        children: [],
+        path: '/practice/x2js/index'
       }
     ]
   }
